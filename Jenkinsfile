@@ -1,15 +1,22 @@
 pipeline {
   agent any
   stages {
+
+    stage('Start') {
+      steps {
+        echo 'Start'
+      }
+    }
+    
     stage('build maven project') {
       steps {
-        sh 'mvn compile'
+        sh '/usr/local/Cellar/maven/3.8.6/libexec/mvn compile'
       }
     }
 
     stage('Package') {
       steps {
-        sh 'mvn package'
+        sh '/usr/local/Cellar/maven/3.8.6/libexec/mvn package'
       }
     }
 
