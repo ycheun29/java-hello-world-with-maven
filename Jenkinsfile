@@ -10,13 +10,13 @@ pipeline {
     
     stage('build maven project') {
       steps {
-        sh '/usr/local/Cellar/maven/3.8.6/libexec/mvn compile'
+        sh '/usr/local/Cellar/maven/3.8.6/libexec/bin/mvn compile'
       }
     }
 
     stage('Package') {
       steps {
-        sh '/usr/local/Cellar/maven/3.8.6/libexec/mvn package'
+        sh '/usr/local/Cellar/maven/3.8.6/libexec/bin/mvn package'
       }
     }
 
