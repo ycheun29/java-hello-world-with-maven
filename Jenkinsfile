@@ -3,13 +3,13 @@ pipeline {
   stages {
     stage('build maven project') {
       steps {
-        bat 'mvn compile'
+        sh 'mvn compile'
       }
     }
 
     stage('Package') {
       steps {
-        bat 'mvn package'
+        sh 'mvn package'
       }
     }
 
